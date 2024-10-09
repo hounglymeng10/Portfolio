@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #fdfdfd;
+        }
+
+        h1, h2, h3, p {
+            color: #293e48;
+        }
+
+        .btn-primary {
+            background-color: #293e48;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #323330;
+        }
+
+        /* Profile Image Styling */
+        .profile-img {
+            width: 200px; /* Adjust based on desired size */
+            height: 300px; /* 4x6 aspect ratio */
+            object-fit: cover;
+            border-radius: 0.5rem; /* Rounded corners */
+            border: 2px solid #293e48; /* Optional border */
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col justify-between">
+    <!-- Navbar -->
+    <nav class="bg-[#293e48] text-white py-4 px-8 flex justify-between items-center">
+        <div class="text-xl font-semibold">My Resume</div>
+        <a href="index.html" class="hover:text-[#323330]">Back to Portfolio</a>
+    </nav>
+
+    <!-- Resume Section -->
+    <section class="text-center py-20 px-6">
+        <h1 class="text-4xl font-bold mb-4">Resume</h1>
+        <p class="text-lg mb-6">Here is a quick overview of my skills, experience, and education.</p>
+        
+        <!-- Profile Image and Info -->
+        <div class="max-w-4xl mx-auto text-left flex flex-col md:flex-row items-center mb-6">
+            <img src="cv.JPG" alt="Your Profile Picture" class="profile-img mr-6"> <!-- Profile Image -->
+            <div>
+                <p><strong>Name:</strong> Houng Lymeng</p>
+                <p><strong>Email:</strong> houng.lymeng.2821@rupp.edu.kh</p>
+                <p><strong>Phone:</strong> +855 68 500 601</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/houng-lymeng168" target="_blank">linkedin.com/in/houng-lymeng168</a></p>
+            </div>
+        </div>
+
+        <!-- Resume Content -->
+        <div class="max-w-4xl mx-auto text-left">
+            <!-- Objective Section -->
+            <h2 class="text-3xl font-bold mb-4">Objective</h2>
+            <p class="mb-4">I am an IT Engineering student at the Royal University of Phnom Penh with experience in software development, mobile apps, and digital marketing. I worked in front-of-house and reporting at Backyard Café, where I also trained staff on POS systems for new features. I am passionate about using my IT and marketing skills to solve problems and improve operations.</p>
+            
+            <!-- Education Section -->
+            <h2 class="text-3xl font-bold mb-4">Education</h2>
+            <p class="mb-4"><strong>Bachelor of IT Engineering</strong> | Royal University of Phnom Penh (2021–Present)</p>
+            <p class="mb-4"><strong>Science Diploma</strong> | Angkor Chum High School (2021)</p>
+
+            <!-- Languages Section -->
+            <h2 class="text-3xl font-bold mb-4">Languages</h2>
+            <p class="mb-4"><strong>Khmer:</strong> Mother Tongue</p>
+            <p class="mb-4"><strong>English:</strong> Intermediate</p>
+
+            <!-- Skills Section -->
+            <h2 class="text-3xl font-bold mb-4">Skills</h2>
+            <h3 class="font-semibold mb-2">Technical Skills:</h3>
+            <ul class="list-disc ml-8 mb-4">
+                <li>Software Tools: Excel, Google Sheets, WordPress</li>
+                <li>Web Development: HTML, CSS, JavaScript, Laravel</li>
+                <li>Mobile Development: Kotlin, Java</li>
+            </ul>
+            <h3 class="font-semibold mb-2">Soft Skills:</h3>
+            <ul class="list-disc ml-8 mb-4">
+                <li>Communication</li>
+                <li>Teamwork</li>
+                <li>Flexibility</li>
+                <li>Problem Solving</li>
+                <li>Self-Management</li>
+            </ul>
+
+            <!-- Work Experience Section -->
+            <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold">FOH at Backyard Café (February 2022 - 2024)</h3>
+                <ul class="list-disc ml-8 mb-4">
+                    <li>Processed payments and issued receipts.</li>
+                    <li>Prepared daily reports using Excel and Google Sheets.</li>
+                    <li>Delivered friendly customer service, including taking orders and addressing inquiries.</li>
+                    <li>Resolved customer complaints efficiently.</li>
+                    <li>Trained new staff on POS features and usage, including demonstrations and presentations.</li>
+                    <li>Delivered clear information on new POS functionalities and system updates.</li>
+                    <li>Collected and acted on customer feedback via Google Forms to enhance service quality.</li>
+                    <li>Shared product knowledge with customers.</li>
+                </ul>
+            </div>
+
+            <!-- IT Projects Section -->
+            <h2 class="text-3xl font-bold mb-4">IT Projects</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold">1. Food Ordering System (Web and Cloud)</h3>
+                <p><strong>Role:</strong> Schedule Management and Coding</p>
+                <p><strong>Tech:</strong> HTML, CSS, JavaScript, Laravel, MySQL</p>
+                <p>Developed user roles, CRUD operations, login/registration (email & social login), order placement, and an Admin dashboard with revenue reports and order trends analysis.</p>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold">2. 3D Teapot (Computer Graphics Project)</h3>
+                <p><strong>Role:</strong> Developer, Project Lead</p>
+                <p><strong>Tech:</strong> C++, OpenGL</p>
+                <p>Created 3D animations and transformations for static objects with color buffer implementation.</p>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold">3. News App (Mobile Application)</h3>
+                <p><strong>Role:</strong> Mobile Developer and Meeting Management</p>
+                <p><strong>Tech:</strong> Java</p>
+                <p>Developed a news app connected to NewsAPI.org for instant and reliable updates.</p>
+            </div>
+
+            <!-- Completed Course Section -->
+            <h2 class="text-3xl font-bold mb-4">Completed Course</h2>
+            <p class="mb-4"><strong>Digital Marketing Certification</strong> | Udemy (2024)</p>
+            <ul class="list-disc ml-8 mb-4">
+                <li>Learned key skills in SEO, email marketing, and Google Analytics.</li>
+                <li>Gained experience with Google Ads, YouTube Ads, and social media marketing (Facebook, Instagram, LinkedIn).</li>
+                <li>Studied digital marketing strategy, branding, and content marketing.</li>
+                <li>Trained in freelancing and WordPress for website creation.</li>
+            </ul>
+
+            <!-- Resume Download -->
+            <a href="#https://www.canva.com/design/DAFze932EU4/CbF6dPvv-tMtYS1qjCCAJg/edit?utm_content=DAFze932EU4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn-primary px-6 py-2 rounded-full inline-block mt-6">Download Full Resume</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#293e48] text-white py-4 text-center">
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>
