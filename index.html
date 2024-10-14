@@ -124,33 +124,48 @@
 
 <body class="min-h-screen flex flex-col">
     <!-- Navbar -->
-    <nav class="bg-[#293e48] text-white py-4 px-8 flex justify-between items-center sticky top-0 z-10">
+    <nav class="bg-[#293e48] text-white py-4 px-4 sm:px-8 flex justify-between items-center sticky top-0 z-10">
         <div class="text-xl font-semibold">Portfolio</div>
-        <div>
-            <a href="#about" class="ml-6 hover:text-[#323330]">About</a>
-            <a href="works.html" class="ml-6 hover:text-[#323330]">Works</a>
-            <a href="#projects" class="ml-6 hover:text-[#323330]">Projects</a>
-            <a href="resume.html" class="ml-6 hover:text-[#323330]">Resume</a>
-            <a href="#contact" class="ml-6 hover:text-[#323330]">Contact</a>
+        <div class="hidden md:flex">
+            <a href="#about" class="ml-4 sm:ml-6 hover:text-[#323330]">About</a>
+            <a href="works.html" class="ml-4 sm:ml-6 hover:text-[#323330]">Works</a>
+            <a href="#projects" class="ml-4 sm:ml-6 hover:text-[#323330]">Projects</a>
+            <a href="resume.html" class="ml-4 sm:ml-6 hover:text-[#323330]">Resume</a>
+            <a href="#contact" class="ml-4 sm:ml-6 hover:text-[#323330]">Contact</a>
+        </div>
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <!-- Add an icon here for the menu (e.g., using Font Awesome) -->
+                ☰
+            </button>
         </div>
     </nav>
 
-<!-- Hero Section -->
-<section id="hero" class="text-center py-20 px-6 flex flex-col md:flex-row items-center justify-between">
-    <!-- Left Content: Name and Description -->
-    <div class="md:w-1/2 text-left">
-        <h1 class="text-4xl font-bold mb-4">Houng Lymeng</h1>
-        <p class="text-lg mb-2 font-semibold">Open Work!</p>
-        <p class="text-lg mb-6"></p>
-        <a href="#projects" class="btn-primary px-6 py-2 rounded-full transition-all">See Projects</a>
+    <!-- Mobile Menu (hidden by default) -->
+    <div id="mobile-menu" class="bg-[#293e48] text-white py-4 px-4 flex flex-col items-start space-y-4 hidden">
+        <a href="#about" class="hover:text-[#323330]">About</a>
+        <a href="works.html" class="hover:text-[#323330]">Works</a>
+        <a href="#projects" class="hover:text-[#323330]">Projects</a>
+        <a href="resume.html" class="hover:text-[#323330]">Resume</a>
+        <a href="#contact" class="hover:text-[#323330]">Contact</a>
     </div>
 
-    <!-- Right Content: Image -->
-    <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
-        <img class="w-32 sm:w-40 h-48 sm:h-60 object-cover" src="cv.JPG" alt="Profile Picture">
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section id="hero" class="text-center py-16 px-4 sm:py-20 sm:px-6 flex flex-col items-center md:flex-row md:justify-between">
+        <!-- Left Content: Name and Description -->
+        <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-4">Houng Lymeng</h1>
+            <p class="text-lg mb-2 font-semibold">Open to Opportunities</p>
+            <p class="text-sm mb-6">A passionate developer specializing in web and mobile development. Let's create something amazing together!</p>
+            <a href="#projects" class="inline-block btn-primary px-6 py-2 rounded-full transition-all">See Projects</a>
+        </div>
 
+        <!-- Right Content: Image -->
+        <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
+            <img class="w-28 sm:w-32 md:w-40 h-40 sm:h-48 md:h-60 object-cover rounded-full" src="cv.JPG" alt="Profile Picture">
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="py-20 px-6 bg-[#293e48] text-white">
@@ -164,37 +179,36 @@
             background and passion for effective management to your team.</p>
     </section>
 
-<!-- Skills Section -->
-<section id="skills" class="py-20 px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Skills</h2>
-    
-    <div class="skills">
-        <!-- Technical Skills -->
-        <div class="technical-skills">
-            <h3 class="text-2xl font-semibold mb-4">Technical Skills</h3>
-            <ul>
-                <li>Software Tools: Excel, Google Sheets, WordPress</li>
-                <li>Web Development: HTML, CSS, JavaScript, Laravel</li>
-                <li>Mobile Development: Kotlin, Java
-                    Soft Skills:</li>
-                <!-- Add more technical skills as needed -->
-            </ul>
-        </div>
-        
-        <!-- Soft Skills -->
-        <div class="soft-skills">
-            <h3 class="text-2xl font-semibold mb-4">Soft Skills</h3>
-            <ul>
-                <li>Communication</li>
-                <li>Teamwork</li>
-                <li>Flexibility</li>
-                <li>Problem Solving</li>
-                <li>Self-Management</li>
-                <!-- Add more soft skills as needed -->
-            </ul>
-        </div>
-    </div>
-</section>
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Skills</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12 text-left">
+                <!-- Technical Skills -->
+                <div class="technical-skills">
+                    <h3 class="text-2xl font-semibold mb-4">Technical Skills</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Software Tools: Excel, Google Sheets, WordPress</li>
+                        <li>Web Development: HTML, CSS, JavaScript, Laravel</li>
+                        <li>Mobile Development: Kotlin, Java</li>
+                        <!-- Add more technical skills as needed -->
+                    </ul>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="soft-skills">
+                    <h3 class="text-2xl font-semibold mb-4">Soft Skills</h3>
+                    <ul class="list-disc pl-6">
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Flexibility</li>
+                        <li>Problem Solving</li>
+                        <li>Self-Management</li>
+                        <!-- Add more soft skills as needed -->
+                    </ul>
+                </div>
+            </div>
+        </section>
 
         <!-- Projects Section -->
         <section id="projects" class="py-20 px-6 bg-[#293e48] text-white">
@@ -249,7 +263,7 @@
             <a href="https://www.linkedin.com/in/houng-lymeng168/" target="_blank" title="LinkedIn">
                 <i class="bi bi-linkedin text-2xl"></i>
             </a>
-            <a href="https://github.com/hounglymeng" target="_blank" title="GitHub">
+            <a href="https://github.com/hounglymeng10" target="_blank" title="GitHub">
                 <i class="bi bi-github text-2xl"></i>
             </a>
             <a href="https://t.me/Hounglymeng168" target="_blank" title="Telegram">
@@ -275,6 +289,12 @@
         function closeModal(modalId) {
             document.getElementById(modalId).classList.add('hidden');
         }
+
+                // Toggle mobile menu visibility
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
     
 </body>
