@@ -289,10 +289,10 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#ffffff] text-[#ffffff] py-4 text-center">
-        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer class="bg-[#ffffff] text-[#ffffff] py-4 text-center">
+    <p>&copy; <span id="currentYear"></span> hounglymengsite. All Rights Reserved.</p>
+</footer>
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
@@ -309,6 +309,11 @@
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
+
+            // Get the current year
+            const currentYear = new Date().getFullYear();
+            // Set the current year in the footer
+            document.getElementById('currentYear').textContent = currentYear;
     </script>
     
 </body>
