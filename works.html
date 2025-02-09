@@ -4,74 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Work Experience</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #293e48; /* Light background for contrast */
+            background-color: #f4f4f4;
+            font-family: 'Poppins', sans-serif;
         }
+
         .card {
-            transition: transform 0.2s;
+            background: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
         .card:hover {
-            transform: scale(1.05);
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .company-info img {
+            border-radius: 50%;
+            border: 2px solid #e0e0e0;
+            transition: border-color 0.3s ease;
+        }
+
+        .card:hover .company-info img {
+            border-color: #0d6efd;
+        }
+
+        .responsibility-list {
+            list-style-type: disc;
+            color: #666;
+            padding-left: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .company-info img {
+                width: 50px;
+                height: 50px;
+            }
         }
     </style>
 </head>
 <body class="text-gray-800">
-    <!-- Navbar -->
-    <nav class="bg-[#293e48] text-white py-4 px-8 flex justify-between items-center">
-        <div class="text-xl font-semibold">My Works</div>
-        <a href="index.html" class="hover:text-[#293e48]">Back to Portfolio</a>
+    <!-- Navigation Bar -->
+    <nav class="bg-white py-4 px-8 flex justify-between items-center shadow-md">
+        <div class="text-xl font-semibold company-title">My Works</div>
+        <a href="index.html" class="hover:text-blue-500 nav-link">Back to Portfolio</a>
     </nav>
-    <!-- Work Experience Section -->
-    <section id="work-experience" class="py-20 px-6">
-        <h2 class="text-4xl font-bold text-center mb-10" style="color: #293e48;">Work Experience</h2>
-        
-        <div class="max-w-4xl mx-auto">
-            <!-- Backyard Café Card -->
 
-        <!-- Backyard Café Card -->
-        <div class="card bg-white shadow-lg rounded-lg p-6 mb-8 transition-transform duration-300 hover:shadow-xl hover:scale-105">
-            <div class="flex items-center mb-4">
-                <img src="backyard_n.png" alt="Backyard Café Logo" class="w-16 h-16 rounded-full border-2 border-[#014164] mr-4"> <!-- Circular logo with border -->
-                <div>
-                    <h3 class="text-2xl font-semibold text-[#014164]">Backyard Café</h3> <!-- Company Name -->
+    <!-- Work Experience Section -->
+    <section id="work-experience" class="py-12 px-6 bg-gray-100">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8 company-title">Work Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Backyard Café -->
+                <div class="card bg-white rounded-lg p-6 transition-transform duration-300">
+                    <div class="mb-4 company-info flex items-center gap-4">
+                        <img src="backyard_n.png" alt="Backyard Café Logo" class="w-20 h-20 rounded-full object-cover border-2 border-gray-300">
+                        <h3 class="text-2xl font-semibold company-title">Backyard Café</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="text-lg font-semibold role-title">Front-of-House (FOH)</h4>
+                        <p class="text-gray-600 italic">February 2022</p>
+                    </div>
+                    <ul class="responsibility-list">
+                        <li>
+                            Provided fast, kind, and accurate customer service by ensuring all orders were processed efficiently and with a friendly attitude.
+                        </li>
+                        <li>
+                            Prepared daily reports using Excel and Google Sheets, analyzing sales data and identifying trends to improve operations.
+                        </li>
+                        <li>
+                            Resolved customer complaints efficiently by actively listening to their concerns and offering appropriate solutions to ensure satisfaction.
+                        </li>
+                        <li>
+                            Shared product knowledge with customers, educating them about menu items and promotions to enhance their dining experience.
+                        </li>
+                    </ul>
+                    <div class="mt-4">
+                        <h4 class="text-lg font-semibold role-title">FOH Supervisor</h4>
+                        <p class="text-gray-600 italic">October 2022 - 2024</p>
+                    </div>
+                    <ul class="responsibility-list mt-2">
+                        <li>
+                            Ensured the team delivers fast, friendly, and accurate service by providing ongoing training and feedback to staff members.
+                        </li>
+                        <li>
+                            Managed ordering of soft beverages and cash handling after service, maintaining accurate inventory levels and financial records.
+                        </li>
+                        <li>
+                            Handled printing of menus and managing orders for supplies, coordinating with vendors to ensure timely deliveries.
+                        </li>
+                        <li>
+                            Conducted weekly deposits to the CEO’s bank account, ensuring all financial transactions were properly documented.
+                        </li>
+                        <li>
+                            Surveyed customers for feedback using Google Forms to identify areas for improvement and implement changes to enhance service quality.
+                        </li>
+                        <li>
+                            Managed and monitored guest reservations, ensuring tables were allocated efficiently to maximize customer satisfaction.
+                        </li>
+                        <li>
+                            Trained new staff on POS features and system updates, ensuring they were equipped with the necessary skills to perform their roles effectively.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CheckinMe Scholarship Program -->
+                <div class="card bg-white rounded-lg p-6 transition-transform duration-300">
+                    <div class="mb-4 company-info flex items-center gap-4">
+                        <img src="checkinme.png" alt="CheckinMe Logo" class="w-20 h-20 rounded-full object-cover border-2 border-gray-300">
+                        <h3 class="text-2xl font-semibold company-title">CheckinMe Scholarship Program</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="text-lg font-semibold role-title">Team Lead & Digital Marketing Project</h4>
+                        <p class="text-gray-600 italic">January 2025</p>
+                    </div>
+                    <ul class="responsibility-list">
+                        <li>
+                            Led a team and guided them towards a common goal by fostering collaboration and setting clear objectives for each project phase.
+                        </li>
+                        <li>
+                            Managed the project, including planning and execution, ensuring deadlines were met and deliverables were of high quality.
+                        </li>
+                        <li>
+                            Created engaging digital content, including creative posters and videos, to promote the scholarship program and attract participants.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Keepo Cambodia -->
+                <div class="card bg-white rounded-lg p-6 transition-transform duration-300">
+                    <div class="mb-4 company-info flex items-center gap-4">
+                        <img src="keepo.png" alt="Keepo Cambodia Logo" class="w-20 h-20 rounded-full object-cover border-2 border-gray-300">
+                        <h3 class="text-2xl font-semibold company-title">Keepo Cambodia</h3>
+                    </div>
+                    <div class="mb-4">
+                        <h4 class="text-lg font-semibold role-title">Digital Marketing Executive</h4>
+                        <p class="text-gray-600 italic">February 2025</p>
+                    </div>
+                    <ul class="responsibility-list">
+                        <li>
+                            Created posters, videos, and content for promotions, ensuring all materials aligned with the brand’s identity and marketing goals.
+                        </li>
+                        <li>
+                            Planned and ran RoadShow events to engage customers, coordinating logistics and ensuring smooth execution of activities.
+                        </li>
+                        <li>
+                            Involved in hiring and recruitment processes to support marketing initiatives, conducting interviews and evaluating candidates.
+                        </li>
+                    </ul>
                 </div>
             </div>
-
-            <div class="flex items-center mb-4">
-                <h4 class="text-lg font-semibold text-[#014164]">Front-of-House (FOH)</h4>
-                <p class="text-gray-600 italic ml-2">(February 2022)</p>
-            </div>
-            <h4 class="text-lg font-semibold text-[#323330] border-b-2 border-[#014164] mb-2">Responsibilities:</h4>
-            <ul class="list-disc pl-5 mb-4 text-gray-800">
-                <li>Provided fast, kind, and accurate customer service.</li>
-                <li>Prepared daily reports using Excel and Google Sheets.</li>
-                <li>Resolved customer complaints efficiently.</li>
-                <li>Shared product knowledge with customers.</li>
-            </ul>
-
-            <div class="flex items-center mb-4">
-                <h4 class="text-lg font-semibold text-[#014164]">FOH Supervisor</h4>
-                <p class="text-gray-600 italic ml-2">(October 2022 - 2024)</p>
-            </div>
-            
-            <h4 class="text-lg font-semibold text-[#323330] border-b-2 border-[#014164] mb-2">Responsibilities:</h4>
-            <ul class="list-disc pl-5 text-gray-800">
-                <li>Ensured the team delivers fast, friendly, and accurate service.</li>
-                <li>Managed ordering of soft beverages and cash handling after service.</li>
-                <li>Handled printing of menus and managing orders for supplies.</li>
-                <li>Conducted weekly deposits to the CEO’s bank account.</li>
-                <li>Surveyed customers for feedback using Google Forms to improve service quality.</li>
-                <li>Managed and monitored guest reservations.</li>
-                <li>Trained new staff on POS features and system updates.</li>
-            </ul>
-        </div>
-            <!-- Default Work Experience Card -->
-
         </div>
     </section>
-
 </body>
 </html>
