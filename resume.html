@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Resume</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             background-color: #fdfdfd;
+            font-family: 'Poppins', sans-serif;
         }
-
         h1, h2, h3, p {
             color: #293e48;
         }
-
         .btn-primary {
             background-color: #293e48;
             color: white;
         }
-
         .btn-primary:hover {
             background-color: #323330;
         }
-
         /* Profile Image Styling */
         .profile-img {
             width: 200px; /* Adjust based on desired size */
@@ -32,134 +29,199 @@
             border-radius: 0.5rem; 
             border: 2px solid #293e48; 
         }
+        /* Card Hover Effects */
+        .card {
+            background: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+        /* Progress Bar Styling */
+        .progress-bar {
+            width: 100%;
+            height: 0.5rem;
+            background: #e0e0e0;
+            border-radius: 0.25rem;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+        .progress-bar-fill {
+            height: 100%;
+            background: #293e48;
+        }
+        @media (max-width: 768px) {
+            .profile-img {
+                width: 150px;
+                height: 225px;
+            }
+        }
     </style>
 </head>
-
 <body class="min-h-screen flex flex-col justify-between">
     <!-- Navbar -->
-    <nav class="bg-[#293e48] text-white py-4 px-8 flex justify-between items-center">
+    <nav class="bg-[#293e48] text-white py-4 px-8 flex justify-between items-center shadow-md">
         <div class="text-xl font-semibold">My Resume</div>
-        <a href="index.html" class="hover:text-[#323330]">Back to Portfolio</a>
+        <a href="index.html" class="hover:text-[#323330] nav-link">Back to Portfolio</a>
     </nav>
 
     <!-- Resume Section -->
-    <section class="text-center py-20 px-6">
+    <section class="text-center py-20 px-6 bg-gray-100">
         <h1 class="text-4xl font-bold mb-4">Resume</h1>
-        <p class="text-lg mb-6">Here is my overview of my skills, experience, and education.</p>
+        <p class="text-lg mb-6">Here is an overview of my skills, experience, and education.</p>
         
         <!-- Profile Image and Info -->
         <div class="max-w-4xl mx-auto text-left flex flex-col md:flex-row items-center mb-6">
             <img src="cv.JPG" alt="Your Profile Picture" class="profile-img mr-6"> <!-- Profile Image -->
             <div>
                 <p><strong>Name:</strong> Houng Lymeng</p>
-                <p><strong>Email:</strong> <a href="hounglymeng160923@gmail.com" target="_blank">hounglymeng160923@gmail.com</a></p>
-                
-                <p><strong>Phone:</strong> +855 68 500 601</p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/houng-lymeng168" target="_blank">linkedin.com/in/houng-lymeng168</a></p>
+                <p><strong>Email:</strong> <a href="mailto:hounglymeng160923@gmail.com" class="text-blue-500 hover:underline">hounglymeng160923@gmail.com</a></p>
+                <p><strong>Phone:</strong> +855 81 641 349</p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/houng-lymeng168" target="_blank" class="text-blue-500 hover:underline">linkedin.com/in/houng-lymeng168</a></p>
             </div>
         </div>
 
         <!-- Resume Content -->
         <div class="max-w-4xl mx-auto text-left">
             <!-- Objective Section -->
-            <h2 class="text-3xl font-bold mb-4">Objective</h2>
-            <p class="mb-4">I am an IT Engineering student at the Royal University of Phnom Penh with hands-on experience in software development, mobile application development, and digital marketing. As a Front-of-House Supervisor at Backyard Café, I managed daily reports, trained staff on new POS features, and ensured exceptional customer service. Proficient in HTML, CSS, Laravel, and JavaScript, I am passionate about leveraging my IT and marketing skills to identify and solve problems, streamline operations, and enhance user experiences.</p>
-            
+            <h2 class="text-3xl font-bold mb-4 company-title">Profile Summary</h2>
+            <p class="mb-4">
+                Motivated IT Engineering student at the Royal University of Phnom Penh. Digital Marketing Executive at Keepo Cambodia, creating content, managing events, and assisting with hiring. Former FOH Supervisor at Backyard Café, improving customer service and staff training. Completed a Digital Marketing course on Udemy and led a digital marketing project for the CheckinMe Scholarship Program. Passionate about using technology to solve problems and work in dynamic teams.
+            </p>
+
             <!-- Education Section -->
-            <h2 class="text-3xl font-bold mb-4">Education</h2>
-            <p class="mb-4"><strong>Bachelor of IT Engineering</strong> | Royal University of Phnom Penh (2021–Present)</p>
-            <p class="mb-4"><strong>Science Diploma</strong> | Angkor Chum High School (2021)</p>
+            <h2 class="text-3xl font-bold mb-4 company-title">Education</h2>
+            <p class="mb-4"><strong>Bachelor of IT Engineering</strong> | Royal University of Phnom Penh (2021–2025)</p>
+            <p class="mb-4"><strong>Science Diploma</strong> | Angkor Chum High School (2019–2021)</p>
 
-            <!-- Languages Section -->
-            <h2 class="text-3xl font-bold mb-4">Languages</h2>
-            <p class="mb-4"><strong>Khmer:</strong> Mother Tongue</p>
-            <p class="mb-4"><strong>English</strong></p>
-
-            <!-- Skills Section -->
-            <h2 class="text-3xl font-bold mb-4">Skills</h2>
-            <h3 class="font-semibold mb-2">Technical Skills:</h3>
-            <ul class="list-disc ml-8 mb-4">
-                <li>Software Tools: Excel, Google Sheets, WordPress</li>
-                <li>Frontend Development: HTML, CSS, JavaScript</li>
-                <li>Backend Development: Laravel, MySQL</li>
-                <li>Mobile Development: Kotlin, Java</li>
-            </ul>
-            <h3 class="font-semibold mb-2">Soft Skills:</h3>
-            <ul class="list-disc ml-8 mb-4">
-                <li>Communication</li>
-                <li>Teamwork</li>
-                <li>Flexibility</li>
-                <li>Problem Solving</li>
-                <li>Self-Management</li>
+            <!-- Certifications Section -->
+            <h2 class="text-3xl font-bold mb-4 company-title">Certifications</h2>
+            <p class="mb-4"><strong>Digital Marketing Certification</strong> | Udemy (2024)</p>
+            <ul class="responsibility-list mb-4">
+                <li>Learned key skills in SEO, email marketing, and Google Analytics.</li>
+                <li>Gained experience with social media marketing (Facebook, Instagram, Telegram, LinkedIn).</li>
+                <li>Studied digital marketing strategy, branding, and content marketing.</li>
             </ul>
 
-                    <!-- Work Experience Section -->
-            <h2 class="text-3xl font-bold mb-4">Work Experience</h2>
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold">FOH | Backyard Café (February 2022)</h3>
-                <ul class="list-disc ml-8 mb-4">
-                    <li>Provided fast, friendly, and accurate customer service.</li>
+            <!-- Work Experience Section -->
+            <h2 class="text-3xl font-bold mb-4 company-title">Work Experience</h2>
+            <div class="card bg-white rounded-lg p-6 transition-transform duration-300 mb-6">
+                <h3 class="text-xl font-semibold role-title">FOH | Backyard Café (February 2022 – September 2022)</h3>
+                <ul class="responsibility-list">
+                    <li>Provided fast, kind, and accurate customer service.</li>
                     <li>Prepared daily reports using Excel and Google Sheets.</li>
-                    <li>Resolved customer complaints efficiently.</li>
-                    <li>Shared product knowledge with customers.</li>
+                    <li>Shared product knowledge with customers and maintained a clean and organized dining area.</li>
                 </ul>
             </div>
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold">FOH Supervisor | Backyard Café (October 2022 - 2024)</h3>
-                <ul class="list-disc ml-8 mb-4">
-                    <li>Ensured team provided fast, friendly, and accurate service.</li>
-                    <li>Managed ordering of soft beverages, cashing up after service, and printing menus.</li>
-                    <li>Managed orders for soft drinks and supplies.</li>
-                    <li>Made weekly deposits to the CEO’s bank account.</li>
-                    <li>Surveyed customers for feedback using Google Forms to improve service quality.</li>
-                    <li>Managed and monitored guest reservations.</li>
+            <div class="card bg-white rounded-lg p-6 transition-transform duration-300 mb-6">
+                <h3 class="text-xl font-semibold role-title">FOH Supervisor | Backyard Café (October 2022 – December 2024)</h3>
+                <ul class="responsibility-list">
+                    <li>Ensured the team provided fast, friendly, and accurate service while managing guest reservations.</li>
+                    <li>Made weekly deposits to the CEO’s bank account and ensured proper documentation of financial transactions.</li>
                     <li>Trained new staff on POS features, functionalities, and system updates.</li>
+                    <li>Maintained product quality, restaurant cleanliness, maintenance, and security standards.</li>
+                    <li>Communicated consistently with the general manager and ensured operational paperwork was completed as required.</li>
                 </ul>
             </div>
-
+            <div class="card bg-white rounded-lg p-6 transition-transform duration-300 mb-6">
+                <h3 class="text-xl font-semibold role-title">Digital Marketing Executive | Keepo Cambodia</h3>
+                <ul class="responsibility-list">
+                    <li>Created posters, videos, and promotional content to engage customers.</li>
+                    <li>Planned and executed RoadShow events to promote brand awareness and customer engagement.</li>
+                    <li>Assisted in hiring and recruitment processes to support marketing initiatives.</li>
+                </ul>
+            </div>
+            <div class="card bg-white rounded-lg p-6 transition-transform duration-300 mb-6">
+                <h3 class="text-xl font-semibold role-title">Team Lead & Digital Marketing Project | CheckinMe Scholarship Program</h3>
+                <ul class="responsibility-list">
+                    <li>Led a team and guided them toward achieving a common goal.</li>
+                    <li>Managed the planning and execution of the project to ensure success.</li>
+                    <li>Created engaging digital content, including creative posters and videos, to promote the scholarship program.</li>
+                </ul>
+            </div>
 
             <!-- IT Projects Section -->
-            <h2 class="text-3xl font-bold mb-4">IT Projects</h2>
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold">1. Food Ordering System (Web and Cloud)</h3>
-                <p><strong>Role:</strong> Schedule Management and Coding</p>
-                <p><strong>Tech:</strong> HTML, CSS, JavaScript, Laravel, MySQL</p>
-                <p>Developed user roles, CRUD operations, login/registration (email & social login), order placement, and an Admin dashboard with revenue reports and order trends analysis.</p>
+            <h2 class="text-3xl font-bold mb-4 company-title">IT Projects</h2>
+            <div class="card bg-white rounded-lg p-6 transition-transform duration-300 mb-6">
+                <h3 class="text-xl font-semibold role-title">Fashion Online Shop | Laravel, HTML, CSS, JavaScript, MySQL (August 2024)</h3>
+                <ul class="responsibility-list">
+                    <li>Developed user roles, CRUD operations, and login/registration functionality with email and social login.</li>
+                    <li>Built an admin dashboard featuring revenue reports and order trends analysis.</li>
+                </ul>
             </div>
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold">2. 3D Teapot (Computer Graphics Project)</h3>
-                <p><strong>Role:</strong> Developer, Project Lead</p>
-                <p><strong>Tech:</strong> C++, OpenGL</p>
-                <p>Created 3D animations and transformations for static objects with color buffer implementation.</p>
-            </div>
-            <div class="mb-6">
-                <h3 class="text-xl font-semibold">3. News App (Mobile Application)</h3>
-                <p><strong>Role:</strong> Mobile Developer and Meeting Management</p>
-                <p><strong>Tech:</strong> Java</p>
-                <p>Developed a news app connected to NewsAPI.org for instant and reliable updates.</p>
+            <div class="card bg-white rounded-lg p-6 transition-transform duration-300 mb-6">
+                <h3 class="text-xl font-semibold role-title">News Application | Kotlin (December 2023)</h3>
+                <ul class="responsibility-list">
+                    <li>Developed a functional news app connected to NewsAPI.org for real-time updates.</li>
+                </ul>
             </div>
 
-            <!-- Completed Course Section -->
-            <h2 class="text-3xl font-bold mb-4">Completed Course</h2>
-            <p class="mb-4"><strong>Digital Marketing Certification</strong> 
-                | <a href="https://www.udemy.com/certificate/UC-dd983134-c600-4d14-8910-ce28d698cd61/" target="_blank" class="text-[#014164] no-underline hover:underline hover:text-[#323330]">Udemy (2024)</a>
-            </p>
-            <ul class="list-disc ml-8 mb-4">
-                <li>Learned key skills in SEO, email marketing, and Google Analytics.</li>
-                <li>Gained experience with Social media marketing (Facebook, Telegram, TikTok, Instagram, LinkedIn).</li>
-                <li>Studied digital marketing strategy, branding, and content marketing.</li>
-                <li>Trained in freelancing and WordPress for website creation.</li>
-            </ul>
-
-            <p class="mb-4"><strong>Team Lead & Digital Marketing Project</strong> 
-                | <a href="##" target="_blank" class="text-[#014164] no-underline hover:underline hover:text-[#323330]">CheckinMe Scholarship Program</a>
-            </p>
-            <ul class="list-disc ml-8 mb-4">
-                <li>Leading a team: I learned how to manage a team and guide them towards a common goal.</li>
-                <li>Project management: I learned how to plan and execute a project successfully.</li>
-                <li>Digital marketing: I gained valuable experience in creating and promoting digital content.</li>
-            </ul>
-
+     <!-- Technical Skills Section -->
+<h2 class="text-3xl font-bold mb-4 company-title">Technical Skills</h2>
+<div class="space-y-4">
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">Google Drive:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 90%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">HTML:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 75%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">CSS:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 85%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">JavaScript:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 75%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">Laravel:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 75%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">MySQL:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width:65%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">GitHub:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 65%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">WordPress:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 65%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">Canva:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 85%;"></div>
+        </div>
+    </div>
+    <div class="flex items-center gap-4">
+        <span class="w-32 text-right">CapCut:</span>
+        <div class="progress-bar w-full flex-grow">
+            <div class="progress-bar-fill" style="width: 80%;"></div>
+        </div>
+    </div>
+</div>
 
             <!-- Resume Download -->
             <a href="https://drive.google.com/file/d/1nG3PrOPGmXliamV7WWbCtjWcAjWBsPnX/view?usp=sharing" class="btn-primary px-6 py-2 rounded-full inline-block mt-6">Download Full Resume</a>
@@ -167,9 +229,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#293e48] text-white py-4 text-center">
-        <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+    <footer class="bg-[#293e48] text-white py-4 text-center shadow-md">
+      
     </footer>
 </body>
-
 </html>
